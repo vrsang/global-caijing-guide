@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩经网 · 洞察数字背后的逻辑</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #faf9f7;
+            color: #1e1e1e;
+            line-height: 1.7;
+            font-weight: 400;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+        /* 开场短句 — 极简大标题 */
+        .opening {
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+            font-size: 2.2rem;
+            font-weight: 250;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #111;
+            border-left: 3px solid #d4a373;
+            padding-left: 1.2rem;
+        }
+        .opening em {
+            font-style: normal;
+            font-weight: 420;
+            background: linear-gradient(135deg, #7f5539 0%, #9c6644 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* 承接段落 */
+        .lead {
+            margin: 1.8rem 0 1.6rem 0;
+            font-size: 1.05rem;
+            color: #2c2c2c;
+        }
+        .lead p {
+            margin-bottom: 1.3rem;
+        }
+        .lead a {
+            color: #7f5539;
+            text-decoration: none;
+            border-bottom: 1px solid #d4a373;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+        .lead a:hover {
+            color: #4a2e1b;
+            border-bottom-color: #4a2e1b;
+        }
+        /* 特点列表 — 安静卡片 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2.4rem 0 2.8rem 0;
+        }
+        .feature-card {
+            background: #ffffff;
+            border-radius: 0;
+            padding: 1.2rem 1.4rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+            border-left: 2px solid #e9d8c6;
+            transition: background 0.2s;
+        }
+        .feature-card:hover {
+            background: #f7f3ee;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 490;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+            color: #3f2c1b;
+        }
+        .feature-card p {
+            font-size: 0.93rem;
+            color: #3a3a3a;
+            margin-bottom: 0.1rem;
+        }
+        .feature-card .tag {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #8d6e52;
+            border: 1px solid #d9c6b4;
+            padding: 0.1rem 0.6rem;
+            border-radius: 20px;
+            background: #fcf9f5;
+        }
+        /* 温和结尾 */
+        .closing {
+            margin: 2.8rem 0 1.8rem 0;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ded9d0;
+            font-size: 0.98rem;
+            color: #3b3b3b;
+        }
+        .closing p {
+            margin-bottom: 0.9rem;
+        }
+        .closing a {
+            color: #7f5539;
+            text-decoration: none;
+            border-bottom: 1px solid #d4a373;
+            transition: border-color 0.15s;
+            font-weight: 450;
+        }
+        .closing a:hover {
+            border-bottom-color: #4a2e1b;
+        }
+        .closing .muted {
+            color: #6b5d52;
+            font-size: 0.88rem;
+            margin-top: 1rem;
+        }
+        /* 场景提示 — 一个小标注 */
+        .note {
+            background: transparent;
+            border: 1px dashed #d4c7bb;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0 0.2rem 0;
+            font-size: 0.9rem;
+            color: #4b3f36;
+            border-radius: 0;
+        }
+        .note strong {
+            font-weight: 530;
+            color: #2e221b;
+        }
+        /* 响应式细节 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .opening {
+                font-size: 1.7rem;
+                padding-left: 1rem;
+                border-left-width: 2px;
+            }
+            .feature-card {
+                padding: 1rem 1rem;
+            }
+        }
+        @media (min-width: 720px) {
+            .opening {
+                font-size: 2.6rem;
+            }
+        }
+        /* 极简装饰 */
+        hr {
+            border: none;
+            border-top: 1px solid #e7e0d6;
+            margin: 2rem 0 1rem 0;
+            width: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        每一组数字背后<br>
+        都有一条<em>可追溯的线索</em>。
+    </div>
+
+    <!-- 承接段落：自然引入网站主题 -->
+    <div class="lead">
+        <p>
+            数字与概率，从来不是凭空跳跃的乱码。从排列到组合，从走势到区间，<a href="https://global-caijing.com">彩经网</a>长期沉淀了一套基于公开数据的分析视角。这里不制造玄学，只梳理可被验证的模式与逻辑。
+        </p>
+        <p>
+            对许多关注趋势的人来说，理解数字的冷热、遗漏与回补，本质上是在练习一种结构化的观察方式。平台整合了跨度、和值、奇偶、质合等基础维度，也提供区间分布、位差统计等进阶工具，帮助用户从多个切面审视同一组数据。
+        </p>
+    </div>
+
+    <!-- 特点列表：四个卡片，清晰层级 -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>维度拆解</h3>
+            <p>号码走势、区间分布、连出概率、和值跨度……每个维度独立呈现，也支持交叉比对。</p>
+            <span class="tag">结构化</span>
+        </div>
+        <div class="feature-card">
+            <h3>历史区间</h3>
+            <p>可回溯特定周期内的出现频率与间隔，观察冷热转换的节奏，而非孤立看待单期结果。</p>
+            <span class="tag">可配置</span>
+        </div>
+        <div class="feature-card">
+            <h3>筛选与排序</h3>
+            <p>支持按条件筛选号码组合，排序方式覆盖出现次数、遗漏值、连出可能性等多种参考。</p>
+            <span class="tag">灵活</span>
+        </div>
+        <div class="feature-card">
+            <h3>参数解读</h3>
+            <p>每个统计指标均附简要说明，降低理解门槛，让关注逻辑而非盲目跟从。</p>
+            <span class="tag">透明</span>
+        </div>
+    </div>
+
+    <!-- 场景提示：温和的内容延伸 -->
+    <div class="note">
+        <strong>适用场景举例</strong><br>
+        无论是日常回顾、区间分析，还是自定义条件筛选，<a href="https://global-caijing.com" style="color:#7f5539; text-decoration:none; border-bottom:1px solid #d4a373;">彩经网</a>始终作为工具存在。请理性看待数据，任何分析都不构成确定性建议。
+    </div>
+
+    <!-- 温和结尾 + FAQ摘要风格 -->
+    <div class="closing">
+        <p>
+            数据是沉默的，但结构让它开口。持续观察同一组参数的变化，往往比追逐短期信号更有参照意义。<a href="https://global-caijing.com">彩经网</a>保持着克制的界面与稳定的更新节奏，没有弹窗干扰，也没有冗余推荐。
+        </p>
+        <p>
+            如果你习惯在安静的环境里翻阅数字，这里或许能成为你日常的一个锚点。页面加载迅速，适配手机与桌面，所有功能均可免费使用。
+        </p>
+        <div class="muted">
+            —— 不夸大，不承诺，只提供可查阅的维度与视角。
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 末尾留一个干净的引用，强化品牌但不重复链接 -->
+    <div style="font-size:0.85rem; color:#7e6f60; margin-top:0.2rem;">
+        global-caijing.com · 保持清晰
+    </div>
+
+</div>
+</body>
+</html>
